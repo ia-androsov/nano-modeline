@@ -564,8 +564,21 @@ delay needs to be set to 0."
     (goto-char (point-max))
     (setq-default total-lines     
      (format-mode-line "%l")))
+
+  (defun line-length (n)
+  (save-excursion
+    (goto-char (point-min))
+    (if (zerop (forward-line (1- n)))
+        (- (line-end-position)
+           (line-beginning-position)))))
+
+  (setq-default total-columns 
+    (write-to-string 
+      (line-length 
+        (parse-integer 
+          (format-mode-line "%l ")))))
   
-  (let ((format (or format (concat "%l/" total-lines ":%c "))))
+  (let ((format (or format (concat "%l/" total-lines ":%c/" total-columns))))
     (propertize (format-mode-line format)
                 'face (nano-modeline-face 'secondary))))
 
