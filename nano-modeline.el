@@ -857,7 +857,7 @@ delay needs to be set to 0."
             '((nano-modeline-buffer-status) " "
               (nano-modeline-buffer-name) " "
               (nano-modeline-git-info))
-            '((:eval (mlscroll-mode-line))
+            '('(:eval (mlscroll-mode-line))
               (nano-modeline-cursor-position)
               (nano-modeline-window-dedicated))
             default))
@@ -869,7 +869,7 @@ delay needs to be set to 0."
            '((nano-modeline-buffer-status) " "
              (nano-modeline-buffer-name) " "
              (nano-modeline-git-info))
-           '((:eval (mlscroll-mode-line))
+           '('(:eval (mlscroll-mode-line))
              (nano-modeline-cursor-position)
              (nano-modeline-window-dedicated))
            default))
