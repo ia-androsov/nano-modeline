@@ -565,7 +565,7 @@ delay needs to be set to 0."
     (propertize (format-mode-line format)
                 'face (nano-modeline-face 'secondary))))
 
-(defun nano-modeline-scroll-bar ()
+(defun nano-modeline-scroll-bar (&optional format)
   "Scroll bar."
   
   (let ((format (or format "%p ")))
