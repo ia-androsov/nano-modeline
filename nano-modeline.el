@@ -560,8 +560,12 @@ delay needs to be set to 0."
 
 (defun nano-modeline-cursor-position (&optional format)
   "Cursor position using given FORMAT."
-
-  (let ((format (or format "%l/%i:%c ")))
+    (save-excursion
+    (goto-char (point-max))
+    (setq-default total-lines     
+     (format-mode-line "%l")))
+  
+  (let ((format (or format (concat "%l/" total-lines ":%c "))))
     (propertize (format-mode-line format)
                 'face (nano-modeline-face 'secondary))))
 
