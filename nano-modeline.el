@@ -567,8 +567,8 @@ delay needs to be set to 0."
 
   (save-excursion
     (goto-char (point-min))
-    (if (zerop (forward-line (1- (parse-integer (format-mode-line "%l")))))
-        (setq-default total-columns (write-to-string (- (line-end-position)
+    (if (zerop (forward-line (1- (string-to-number (format-mode-line "%l")))))
+        (setq-default total-columns (number-to-string (- (line-end-position)
            (line-beginning-position))))))
   
   (let ((format (or format (concat "%l/" total-lines ":%c/" total-columns " "))))
