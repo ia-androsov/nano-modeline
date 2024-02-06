@@ -568,8 +568,9 @@ delay needs to be set to 0."
 (defun nano-modeline-scroll-bar ()
   "Scroll bar."
   
-    (propertize (number-to-string 179)
-                'face (nano-modeline-face 'secondary)))
+  (let ((format (or format "%p ")))
+    (propertize (format-mode-line format)
+                'face (nano-modeline-face 'secondary))))
 
 (defun nano-modeline-buffer-line-count ()
   "Buffer total number of lines"
