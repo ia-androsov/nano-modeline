@@ -561,14 +561,7 @@ delay needs to be set to 0."
 (defun nano-modeline-cursor-position (&optional format)
   "Cursor position using given FORMAT."
 
-  (let ((format (or format "%l:%c ")))
-    (propertize (format-mode-line format)
-                'face (nano-modeline-face 'secondary))))
-
-(defun nano-modeline-scroll-bar (&optional format)
-  "Scroll bar."
-  
-  (let ((format (or format "%p ")))
+  (let ((format (or format "%l/%i:%c ")))
     (propertize (format-mode-line format)
                 'face (nano-modeline-face 'secondary))))
 
@@ -864,8 +857,7 @@ delay needs to be set to 0."
             '((nano-modeline-buffer-status) " "
               (nano-modeline-buffer-name) " "
               (nano-modeline-git-info))
-            '((nano-modeline-scroll-bar)
-              (nano-modeline-cursor-position)
+            '((nano-modeline-cursor-position)
               (nano-modeline-window-dedicated))
             default))
 
@@ -876,8 +868,7 @@ delay needs to be set to 0."
            '((nano-modeline-buffer-status) " "
              (nano-modeline-buffer-name) " "
              (nano-modeline-git-info))
-           '((nano-modeline-scroll-bar)
-             (nano-modeline-cursor-position)
+           '((nano-modeline-cursor-position)
              (nano-modeline-window-dedicated))
            default))
 
