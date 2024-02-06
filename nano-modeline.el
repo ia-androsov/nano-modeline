@@ -568,7 +568,7 @@ delay needs to be set to 0."
 (defun nano-modeline-scroll-bar ()
   "Scroll bar."
   
-    (propertize (mlscroll-mode-line)
+    (propertize (number-to-string 179)
                 'face (nano-modeline-face 'secondary)))
 
 (defun nano-modeline-buffer-line-count ()
@@ -902,7 +902,7 @@ delay needs to be set to 0."
              (nano-modeline-window-dedicated))))
 
 (defun nano-modeline-pdf-mode ()
-  "Nano line for text mode"
+  "Nano line for pdf mode"
 
   (funcall nano-modeline-position
            '((nano-modeline-buffer-status "PDF") " "
