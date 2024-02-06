@@ -568,7 +568,7 @@ delay needs to be set to 0."
 (defun nano-modeline-scroll-bar ()
   "Scroll bar."
   
-    (propertize (format-mode-line "(scroll-bar)"))
+    (propertize (format-mode-line "(scroll-bar)")
                 'face (nano-modeline-face 'secondary)))
 
 (defun nano-modeline-buffer-line-count ()
