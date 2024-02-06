@@ -122,6 +122,12 @@
 
 ;;; Code:
 (require 'cl-lib)
+(use-package mlscroll
+  :ensure t
+  :config
+  (setq mlscroll-right-align nil)
+  (mlscroll-mode 1))
+
 
 (defgroup nano nil
   "N Λ N O"
