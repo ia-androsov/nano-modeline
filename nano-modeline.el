@@ -123,6 +123,8 @@
 ;;; Code:
 (require 'cl-lib)
 
+(defvar nano-scroll-bar "")
+
 (defgroup nano nil
   "N Λ N O"
   :group 'convenience)
@@ -560,7 +562,7 @@ delay needs to be set to 0."
 
 (defun nano-modeline-scroll-bar (&optional format)
   "Scroll Bar"
-  (mlscroll-mode-line))
+  nano-scroll-bar)
 
 (defun nano-modeline-cursor-position (&optional format)
   "Cursor position using given FORMAT."
