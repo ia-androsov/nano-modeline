@@ -123,8 +123,6 @@
 ;;; Code:
 (require 'cl-lib)
 
-(defvar nano-modeline-mlscroll "t")
-
 (defgroup nano nil
   "N Λ N O"
   :group 'convenience)
@@ -231,6 +229,8 @@ Each face defined here is used by the modeline depending on the current state (a
 
 (defvar nano-modeline--selected-window nil
   "Selected window before mode-line was activated.")
+
+(defvar nano-modeline-mlscroll "t")
 
 (defun nano-modeline--update-selected-window ()
   "Update selected window (before mode-line is active)"
