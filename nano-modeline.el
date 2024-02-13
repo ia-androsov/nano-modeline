@@ -122,7 +122,7 @@
 
 ;;; Code:
 (require 'cl-lib)
-≈
+
 (defvar nano-scroll-bar "t")
 
 (defgroup nano nil
