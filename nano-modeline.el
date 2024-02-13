@@ -560,8 +560,7 @@ delay needs to be set to 0."
 
 (defun nano-modeline-scroll-bar (&optional format)
   "Scroll Bar"
-  "Scroll-Bar")
-
+  (:eval (mlscroll-mode-line)))
 
 (defun nano-modeline-cursor-position (&optional format)
   "Cursor position using given FORMAT."
