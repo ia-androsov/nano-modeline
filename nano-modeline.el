@@ -558,6 +558,11 @@ delay needs to be set to 0."
                   'face (nano-modeline-face 'primary))
     ""))
 
+(defun nano-modeline-scroll-bar (&optional format)
+  "Scroll Bar"
+  "Scroll-Bar")
+
+
 (defun nano-modeline-cursor-position (&optional format)
   "Cursor position using given FORMAT."
     (save-excursion
@@ -863,7 +868,8 @@ delay needs to be set to 0."
             '((nano-modeline-buffer-status) " "
               (nano-modeline-buffer-name) " "
               (nano-modeline-git-info))
-            '((nano-modeline-cursor-position)
+            '((nano-modeline-scroll-bar)
+              (nano-modeline-cursor-position)
               (nano-modeline-window-dedicated))
             default))
 
@@ -874,7 +880,8 @@ delay needs to be set to 0."
            '((nano-modeline-buffer-status) " "
              (nano-modeline-buffer-name) " "
              (nano-modeline-git-info))
-           '((nano-modeline-cursor-position)
+           '((nano-modeline-scroll-bar)
+             (nano-modeline-cursor-position)
              (nano-modeline-window-dedicated))
            default))
 
