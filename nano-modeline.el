@@ -170,7 +170,7 @@
 (defface nano-modeline-button-active-face
   `((t :foreground ,(face-foreground 'default)
        :background ,(face-background 'default)
-       :family "iMWritingDuo Nerd Font Propo"
+       :family "iMWritingMono Nerd Font"
        :box (:line-width 2
              :color ,(face-foreground 'default)
              :style flat-button)))
@@ -179,7 +179,7 @@
 (defface nano-modeline-button-inactive-face
   `((t :foreground ,(face-foreground (if (facep 'nano-faded) 'nano-faded 'default))
        :background ,(face-background 'header-line nil t)
-       :family "iMWritingDuo Nerd Font Propo"
+       :family "iMWritingMono Nerd Font"
        :box (:line-width 2
              :color ,(face-foreground 'default)
              :style flat-button)))
@@ -188,7 +188,7 @@
 (defface nano-modeline-button-highlight-face
   `((t :foreground ,(face-background 'default)
        :background ,(face-foreground 'default)
-       :family "iMWritingDuo Nerd Font Propo"
+       :family "iMWritingMono Nerd Font"
        :weight bold))
   "Highlight button face.")
 
