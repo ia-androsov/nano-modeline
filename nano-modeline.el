@@ -475,14 +475,14 @@ made DEFAULT."
   "Install a footer line made of LEFT and RIGHT parts. Line can be
 made DEFAULT."
 
-  (if default
-      (setq-default mode-line-format (nano-modeline--make left right 'header))
-    (setq-local mode-line-format (nano-modeline--make left right 'header)))
+  ;;(if default
+  ;;    (setq-default mode-line-format (nano-modeline--make left right 'header))
+  ;;  (setq-local mode-line-format (nano-modeline--make left right 'header)))
   (make-local-variable 'nano-modeline--buttons)
   (setq nano-modeline--buttons nil)
   (advice-add 'tooltip-hide :before #'nano-modeline--reset-button-state)
-  (face-remap-set-base 'mode-line 'nano-modeline--empty-face)
-  (face-remap-set-base 'mode-line-inactive 'nano-modeline-empty-face)
+  ;;(face-remap-set-base 'mode-line 'nano-modeline--empty-face)
+  ;;(face-remap-set-base 'mode-line-inactive 'nano-modeline-empty-face)
   (add-hook 'post-command-hook #'nano-modeline--update-selected-window))
 
 (defun nano-modeline-buffer-name (&optional name)
