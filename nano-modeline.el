@@ -575,7 +575,7 @@ delay needs to be set to 0."
   
   (let ((format (or format (concat "%l/" total-lines ":%c/" total-columns))))
     (propertize (propertize (format-mode-line format)
-                'face (nano-modeline-face 'secondary)) 'face '(:foreground "#7b82a6"))))
+                'face (nano-modeline-face 'secondary)) 'face '(:background "#1f2335" :foreground "#7b82a6"))))
 
 (defun nano-modeline-buffer-line-count ()
   "Buffer total number of lines"
