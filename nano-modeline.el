@@ -504,7 +504,7 @@ made DEFAULT."
            (propertize (concat top (or status "") bot)
                        'face (nano-modeline-face 'status-RO)))
           ((buffer-modified-p)
-           (propertize (concat top (or status "") bot)
+           (propertize (concat top (or status "") bot)
                        'face (nano-modeline-face 'status-**)))
           (t
            (propertize (concat top (or status "") bot)
