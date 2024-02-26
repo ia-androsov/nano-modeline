@@ -501,13 +501,13 @@ made DEFAULT."
          (top (propertize " " 'display `(raise ,(car padding))))
          (bot (propertize " " 'display `(raise ,(- (cdr padding))))))
     (cond (buffer-read-only
-           (propertize (concat top (or status "󱓷") bot)
+           (propertize (concat top (or status "") bot)
                        'face (nano-modeline-face 'status-RO)))
           ((buffer-modified-p)
-           (propertize (concat top (or status "󰽃") bot)
+           (propertize (concat top (or status "") bot)
                        'face (nano-modeline-face 'status-**)))
           (t
-           (propertize (concat top (or status "󱣫") bot)
+           (propertize (concat top (or status "") bot)
                        'face (nano-modeline-face 'status-RW))))))
 
 
