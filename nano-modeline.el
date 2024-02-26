@@ -167,6 +167,25 @@
         :inherit bold)))
   "Face for line status")
 
+(defface nano-modeline-status-rw
+  `((t (:foreground ,(face-background 'default)
+        :background ,(face-foreground 'shadow nil t)
+        :inherit bold)))
+  "Face for line status RW")
+
+(defface nano-modeline-status-ro
+  `((t (:foreground ,(face-background 'default)
+        :background ,(face-foreground 'shadow nil t)
+        :inherit bold)))
+  "Face for line status RO")
+
+
+(defface nano-modeline-status-**
+  `((t (:foreground ,(face-background 'default)
+        :background ,(face-foreground 'shadow nil t)
+        :inherit bold)))
+  "Face for line status **")
+
 (defface nano-modeline-button-active-face
   `((t :foreground ,(face-foreground 'default)
        :background ,(face-background 'default)
@@ -209,9 +228,9 @@
     (header-inactive    . (nano-modeline-inactive))
     (footer-active      . (nano-modeline-active))
     (footer-inactive    . (nano-modeline-inactive))
-    (status-RW-active   . (nano-modeline-status))
-    (status-RO-active   . (nano-modeline-status))
-    (status-**-active   . (nano-modeline-status
+    (status-RW-active   . (nano-modeline-status-rw))
+    (status-RO-active   . (nano-modeline-status-ro))
+    (status-**-active   . (nano-modeline-status-**
                            ,(when (facep 'nano-popout-i) 'nano-popout-i)))
     (name-active        . (bold))
     (primary-active     . ())
